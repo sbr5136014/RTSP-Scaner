@@ -150,7 +150,7 @@ def main():
     parser.add_argument('-c', '--credentials', type=str, required=False, default=None,
                         help="Credentials in format username:password (e.g., admin:admin)")
     parser.add_argument('-P', '--paths', type=str, required=False, 
-                        default='/Streaming/Channels/101,/live,/live2,/h264Preview_01_main,/h264Preview_01_sub,/cam/realmonitor,/live/ch00_0,/live/ch00_1',
+                        default='/onvif/profile1/media.smp,/,/1,/Streaming/Channels/1,/profile5/media.smp,/onvif/profile5/media.smp,/onvif/profile2/media.smp,/profile2/media.smp,/cam/h264,/live/ch00_0,/live/h264/ch1,/cam/realmonitor?channel=1&subtype=1,/cam/realmonitor?channel=1&subtype=00,/0/main,/mpeg4unicast,/MediaInput/h264,/profile1/media.smp,/mpeg4/1/media.amp,/h264_pcm.sdp,/onvif/profile4/media.smp,/profile4/media.smp,/onvif/profile6/media.smp,/mjpeg/media.smp,/MJPEG/media.smp,/H264/media.smp,/profile1/media.smp,/Streaming/Channels/101,/live,/live2,/h264Preview_01_main,/h264Preview_01_sub,/cam/realmonitor',
                         help="Comma-separated list of RTSP paths to try")
     parser.add_argument('-t', '--timeout', type=int, required=False, default=10,
                         help="Timeout in seconds for each RTSP test")
