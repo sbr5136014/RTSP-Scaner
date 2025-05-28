@@ -126,17 +126,47 @@ The scanner outputs information in several stages:
 
 ## Common RTSP Paths
 
-The scanner tests the following common RTSP paths by default:
-- `/Streaming/Channels/101` (Hikvision)
-- `/live` (Generic)
-- `/live2` (Generic alternative)
-- `/h264Preview_01_main` (Some IP cameras)
-- `/h264Preview_01_sub` (Sub-stream for some IP cameras)
-- `/cam/realmonitor` (Dahua)
-- `/live/ch00_0` (Various IP cameras)
-- `/live/ch00_1` (Various IP cameras)
+The scanner tests the following common RTSP paths by default, including extensive Samsung camera support from iSpyConnect database:
+
+**ONVIF Standard Paths:**
+- `/onvif/profile1/media.smp` (ONVIF Profile 1)
+- `/onvif/profile2/media.smp` (ONVIF Profile 2)
+- `/onvif/profile4/media.smp` (ONVIF Profile 4)
+- `/onvif/profile5/media.smp` (ONVIF Profile 5)
+- `/onvif/profile6/media.smp` (ONVIF Profile 6)
+
+**Samsung Camera Paths:**
+- `/profile1/media.smp` (Samsung Profile 1)
+- `/profile2/media.smp` (Samsung Profile 2)
+- `/profile4/media.smp` (Samsung Profile 4)
+- `/profile5/media.smp` (Samsung Profile 5)
+- `/MJPEG/media.smp` (Samsung MJPEG)
+- `/H264/media.smp` (Samsung H.264)
+- `/mjpeg/media.smp` (Samsung MJPEG alt)
+- `/h264_pcm.sdp` (Samsung H.264 SDP)
+
+**Generic Camera Paths:**
+- `/` (Root path)
+- `/1` (Channel 1)
+- `/Streaming/Channels/1` (Generic streaming)
+- `/Streaming/Channels/101` (Hikvision style)
+- `/live` (Generic live)
+- `/live2` (Generic live alternative)
+- `/live/ch00_0` (Channel 0)
+- `/live/h264/ch1` (H.264 Channel 1)
+- `/h264Preview_01_main` (Main stream)
+- `/h264Preview_01_sub` (Sub-stream)
+- `/cam/h264` (H.264 camera)
+- `/cam/realmonitor` (Dahua style)
+- `/cam/realmonitor?channel=1&subtype=1` (Dahua with params)
+- `/cam/realmonitor?channel=1&subtype=00` (Dahua alt params)
+- `/0/main` (Main stream channel 0)
+- `/mpeg4unicast` (MPEG4 unicast)
+- `/MediaInput/h264` (Media input H.264)
+- `/mpeg4/1/media.amp` (MPEG4 channel 1)
 
 You can specify custom paths using the `-P` option.
+
 
 ## Common Credentials
 
